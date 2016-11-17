@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block content %}	   
+
+
+    <form method="POST" class="post-form">
+        <div class="form-group">
+              {% csrf_token %}
+            <div class="col-xs-2">
+                
+                <label for="{{ form.numero_um.id_for_label }}" class="label label-primary">{{ form.numero_um.label }}</label>
+                {{form.numero_um}}
+                <label for="{{ form.numero_dois.id_for_label }}" class="label label-primary">{{ form.numero_dois.label }}</label>
+                {{form.numero_dois}}
+                <br>
+                <button type="submit" class="btn btn-primary" role="button">Calcular</button>      
+            </div>  
+
+                
+              
+        </div> 
+    </form>
+    
+{% endblock %}        
+       
